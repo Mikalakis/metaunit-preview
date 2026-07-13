@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>metaUNIT — AI, directed. A director-led AI unit for film &amp; advertising.</title>
+<meta name="description" content="metaUNIT is a director-led AI unit for film and advertising — full-generative AI shots inside a full production system. Built by filmmakers, with filmmakers. Led by Kuba Michalczuk.">
+<meta property="og:title" content="metaUNIT — AI, directed."><meta property="og:image" content="assets/img/hero_reel_poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<noscript><style>.rev{opacity:1 !important}</style></noscript>
+<style>
+:root{--bg:#08080a;--bg2:#0d0e11;--card:#101116;--ink:#ececed;--dim:#9a9ba1;--faint:#6b6c72;
+--hair:rgba(255,255,255,.08);--hair2:rgba(255,255,255,.15);--acc:#e0a63c;--max:1300px;--pad:48px;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img,video{display:block;max-width:100%}
+::selection{background:var(--acc);color:#000}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.lab{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);display:inline-flex;align-items:center;gap:12px}
+.lab::before{content:"";width:22px;height:1px;background:var(--acc)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:80;backdrop-filter:blur(22px) saturate(160%);background:rgba(8,8,10,.6);border-bottom:1px solid var(--hair)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:17px var(--pad);gap:24px}
+.logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:19px;color:var(--ink);display:flex;align-items:center;letter-spacing:-.01em}
+.logo i{color:var(--acc);font-style:normal;margin:0 1px}
+.nav-links{display:flex;gap:30px;font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:10px 18px;border:1px solid var(--hair2);border-radius:2px;color:var(--ink);transition:.3s}
+.nav-cta:hover{background:var(--ink);color:#000;border-color:var(--ink)}
+@media(max-width:900px){.nav-links{display:none}}
+.hero{position:relative;height:100vh;min-height:720px;overflow:hidden;background:#000;display:flex;flex-direction:column;justify-content:flex-end}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;filter:contrast(1.05) saturate(.95) brightness(.6)}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(8,8,10,.5) 0%,rgba(8,8,10,0) 28%,rgba(8,8,10,0) 46%,rgba(8,8,10,.85) 84%,var(--bg) 100%)}
+.hero-in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:space-between;padding-top:100px;padding-bottom:52px}
+.hero .lab{margin-bottom:24px;color:#cfc9bd}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(60px,12.5vw,210px);line-height:.9;letter-spacing:-.045em;color:#fff;margin-bottom:28px}
+.hero h1 .d{color:var(--acc)}
+.hero-sub{font-size:clamp(15px,1.5vw,18px);font-weight:300;color:#cfcfd2;max-width:560px;line-height:1.55;margin-bottom:52px;text-wrap:balance}
+.specbar{border-top:1px solid var(--hair2);display:grid;grid-template-columns:repeat(4,1fr);gap:28px;padding-top:22px}
+.spec .k{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin-bottom:9px}
+.spec .v{font-family:'Inter',sans-serif;font-weight:500;font-size:13.5px;color:var(--ink);line-height:1.35}
+@media(max-width:760px){.specbar{grid-template-columns:1fr 1fr;gap:20px}}
+/* CLIENTS */
+.clients{border-bottom:1px solid var(--hair);padding:34px 0;background:var(--bg)}
+.clients-in{display:flex;align-items:baseline;justify-content:space-between;gap:24px 40px;flex-wrap:wrap}
+.clients .lab{flex:none}
+.clients .names{display:flex;gap:22px;flex-wrap:wrap;font-family:'Inter',sans-serif;font-weight:400;font-size:16px;color:var(--faint);letter-spacing:.01em}
+.clients .names span{transition:.3s;cursor:default}
+.clients .names span:hover{color:var(--ink)}
+/* SECTIONS */
+section{padding:120px 0;position:relative}
+.shead{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:26px}
+.shead h2{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(30px,4.4vw,56px);line-height:1;letter-spacing:-.03em;color:var(--ink);max-width:16ch}
+.shead h2 em{font-style:normal;color:var(--dim)}
+.shead .rt{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);max-width:300px;text-align:right;line-height:1.7}
+@media(max-width:820px){.shead{flex-direction:column;align-items:flex-start}.shead .rt{text-align:left}}
+/* POSITIONING */
+.posband{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);background:var(--bg2);padding:88px 0}
+.pos-top{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:26px}
+.pos-tag{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+.posband p.small{font-size:clamp(15px,1.55vw,17px);color:var(--dim);line-height:1.55;margin:0 0 34px;max-width:840px;font-weight:300;text-align:justify}
+.posband p.key{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:40px;line-height:1.02;letter-spacing:-.03em;color:var(--ink);white-space:nowrap;width:100%}
+.posband p.key em{font-style:normal;color:var(--acc)}
+@media(max-width:680px){.posband p.key{white-space:normal}}
+/* WALL */
+.wall{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:148px;grid-auto-flow:dense;gap:8px;padding:0 8px;max-width:1360px;margin:8px auto 0}
+.tile{position:relative;overflow:hidden;border-radius:3px;background:#0d0e11;border:1px solid var(--hair);transition:transform .5s cubic-bezier(.2,.6,.2,1),border-color .3s;z-index:1}
+.tile:hover{transform:scale(1.05);z-index:5;border-color:var(--hair2)}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.98)}
+.tile img.a,.tile img.b{opacity:0;transition:opacity 1.1s ease}
+.tile img.show{opacity:1}
+.tile.wide{grid-column:span 2}
+.tile.vid{cursor:pointer}
+.tile.vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s ease;z-index:2}
+.tile.vid:hover video{opacity:1}
+.tile.vid .phi{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.tile.vid::after{content:"▶";position:absolute;right:10px;bottom:8px;z-index:3;font-size:10px;color:#fff;opacity:.7;transition:.3s}
+.tile.vid:hover::after{opacity:0}
+.tile::before{content:"";position:absolute;inset:0;box-shadow:inset 0 0 60px rgba(0,0,0,.35);pointer-events:none;z-index:3}
+@media(max-width:900px){.wall{grid-template-columns:repeat(4,1fr);grid-auto-rows:120px}}
+@media(max-width:560px){.wall{grid-template-columns:repeat(3,1fr);grid-auto-rows:104px}}
+/* FILMS */
+.films{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:54px}
+.film{position:relative;overflow:hidden;border:1px solid var(--hair);border-radius:5px;background:#000;aspect-ratio:16/9;cursor:pointer;transition:border-color .3s,transform .5s cubic-bezier(.2,.6,.2,1)}
+.film:hover{border-color:var(--hair2)}
+.film.w12{grid-column:span 12;aspect-ratio:21/9}.film.w6{grid-column:span 6}.film.w4{grid-column:span 4}
+.film video,.film .pf{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:1.2s cubic-bezier(.2,.6,.2,1)}
+.film video{opacity:0;transition:opacity .4s ease;z-index:1}
+.film:hover video{opacity:1}
+.film:hover .pf{transform:scale(1.04)}
+.film::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1) 0%,transparent 32%,transparent 52%,rgba(0,0,0,.9) 100%);pointer-events:none;z-index:2}
+.film .finfo{position:absolute;left:20px;right:20px;bottom:17px;z-index:3}
+.film .finfo h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:19px;letter-spacing:-.015em;color:#fff;line-height:1.05}
+.film.w12 .finfo h3{font-size:30px}
+.film .cred{margin-top:8px;display:flex;flex-wrap:wrap;gap:14px;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.film .cred b{color:var(--faint);font-weight:400;margin-right:5px}
+.film .watch{position:absolute;top:15px;right:16px;z-index:3;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.4);backdrop-filter:blur(6px);padding:6px 10px;border-radius:2px;display:flex;align-items:center;gap:6px;opacity:0;transition:.3s}
+.film:hover .watch{opacity:1}
+.film .feat{position:absolute;top:15px;left:20px;z-index:3;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc)}
+@media(max-width:900px){.film.w6,.film.w4{grid-column:span 12}.film.w12{aspect-ratio:16/9}}
+/* MANIFESTO */
+.mani{background:var(--bg)}
+.mani-lead{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(30px,4.4vw,54px);line-height:1.06;letter-spacing:-.03em;color:var(--ink);max-width:20ch;margin:22px 0 20px}
+.mani-lead em{font-style:normal;color:var(--acc)}
+.mani-sub{color:var(--dim);font-size:17px;max-width:640px;line-height:1.55;margin-bottom:60px;font-weight:300}
+.prin{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair);border-radius:5px;overflow:hidden}
+.pr{background:var(--bg);padding:38px 32px;display:flex;flex-direction:column;min-height:240px;transition:.3s}
+.pr:hover{background:var(--card)}
+.pr .n{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--acc);margin-bottom:26px}
+.pr h4{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:21px;letter-spacing:-.02em;color:var(--ink);margin:0 0 12px;line-height:1.12;min-height:2.24em}
+.pr p{font-size:14px;color:var(--dim);line-height:1.55}
+@media(max-width:900px){.prin{grid-template-columns:1fr}}
+/* CLIMAX */
+.climax{position:relative;overflow:hidden;background:#000;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.climax .bg{position:absolute;inset:0;background:url('assets/mood/parking.jpg') center/cover;opacity:.28;filter:grayscale(.3) contrast(1.05) brightness(.7)}
+.climax .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,8,10,.72),rgba(8,8,10,.88))}
+.climax .in{position:relative;z-index:2;padding:150px var(--pad);max-width:var(--max)}
+.climax h3{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(28px,3.9vw,50px);line-height:1.1;letter-spacing:-.03em;color:#fff;margin:22px 0 26px}
+.climax h3 em{font-style:normal;color:var(--acc)}
+.climax p{color:#c9c9cd;font-size:17px;line-height:1.6;max-width:720px;font-weight:300}
+.climax .tagline{margin-top:50px;font-family:'Space Mono',monospace;font-size:clamp(11px,1.08vw,14px);font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--acc);white-space:nowrap}
+/* PEOPLE */
+.people-lead{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(26px,3.6vw,44px);line-height:1.12;letter-spacing:-.025em;color:var(--ink);max-width:24ch;margin:22px 0 10px}
+.people-lead em{font-style:normal;color:var(--acc)}
+.people-sub{color:var(--dim);font-size:15px;max-width:640px;line-height:1.55;margin-bottom:50px;font-weight:300}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--hair);border-radius:5px;overflow:hidden}
+.strip .cell{aspect-ratio:4/5;overflow:hidden;position:relative;border-right:1px solid var(--hair)}
+.strip .cell:last-child{border-right:none}
+.strip .cell img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.06) brightness(.85);transition:1.4s cubic-bezier(.2,.6,.2,1)}
+.strip .cell:hover img{transform:scale(1.05);filter:grayscale(.5) brightness(1)}
+.strip .cell .cap{position:absolute;left:15px;bottom:13px;z-index:2;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#d8d8d8}
+.strip .cell::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(0,0,0,.72))}
+@media(max-width:720px){.strip{grid-template-columns:repeat(2,1fr)}.strip .cell:nth-child(2n){border-right:none}}
+/* CAPS */
+.caps-in{display:flex;flex-wrap:wrap;gap:11px;margin-top:20px}
+.chip{border:1px solid var(--hair2);border-radius:999px;padding:12px 22px;font-family:'Inter',sans-serif;font-weight:400;font-size:15px;color:var(--ink);transition:.3s;display:flex;align-items:center;gap:11px}
+.chip .n{font-family:'Space Mono',monospace;font-size:10.5px;color:var(--acc)}
+.chip:hover{background:var(--card);border-color:var(--acc)}
+/* CONTACT */
+.contact{position:relative;overflow:hidden;background:#000;padding:140px 0 110px}
+.contact .bg{position:absolute;inset:0;background:url('assets/mood/man_edge.jpg') center/cover;opacity:.2;filter:grayscale(.5) contrast(1.05)}
+.contact .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6),#000)}
+.contact-in{position:relative;z-index:2}
+.contact h2{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(48px,9vw,150px);line-height:.92;letter-spacing:-.045em;color:#fff;margin:22px 0 50px}
+.contact h2 em{font-style:normal;color:var(--acc)}
+.contact-row{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.contact-mail{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(24px,3.4vw,42px);letter-spacing:-.02em;color:#fff;display:inline-flex;align-items:center;gap:16px}
+.contact-mail::after{content:"→";color:var(--acc);transition:.3s}.contact-mail:hover::after{transform:translateX(10px)}
+.contact-info{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-align:right;line-height:2}
+footer{border-top:1px solid var(--hair);background:var(--bg);padding:30px 0}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.foot .logo{font-size:14px}
+
+.eco{background:var(--bg2);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.eco-lead{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(30px,4.4vw,54px);line-height:1.06;letter-spacing:-.03em;color:var(--ink);max-width:22ch;margin:22px 0 18px}
+.eco-lead em{font-style:normal;color:var(--acc)}
+.eco-sub{color:var(--dim);font-size:17px;max-width:1120px;line-height:1.55;margin-bottom:52px;font-weight:300;text-align:justify}
+.eco-logos{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;padding:52px 48px;border:1px solid var(--hair);border-radius:6px;background:rgba(255,255,255,.02);margin-bottom:56px}
+.eco-logos .lg{display:flex;align-items:center;justify-content:center;flex:1}
+.eco-logos img{width:auto;opacity:.9;transition:.3s}
+.eco-logos .lg:hover img{opacity:1}
+.eco-logos .mu img{height:30px}
+.eco-logos .wo img{height:60px}
+.eco-logos .mo img{height:64px}
+.eco-logos .sep{color:var(--faint);font-size:22px;font-weight:300;flex:none}
+.eco-body{max-width:800px}
+.eco-body p{color:var(--dim);font-size:16px;line-height:1.7;margin-bottom:20px;font-weight:300}
+.eco-meta{margin-top:46px;padding-top:34px;border-top:1px solid var(--hair2);font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(19px,2.5vw,30px);letter-spacing:-.02em;color:var(--ink);line-height:1.25}
+.eco-meta em{font-style:normal;color:var(--acc)}
+@media(max-width:760px){.eco-logos{gap:22px;padding:32px 24px}.eco-logos .sep{display:none}.eco-logos .lg{flex:1 0 40%}}
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:200;background:rgba(4,4,5,.92);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:40px}
+.lb.on{display:flex}
+.lb-box{width:min(1100px,94vw);position:relative}
+.lb-box video{width:100%;border-radius:6px;background:#000;border:1px solid var(--hair2)}
+.lb-cap{margin-top:16px;display:flex;justify-content:space-between;gap:20px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.lb-cap b{color:#fff;font-weight:400}
+.lb-close{position:absolute;top:-40px;right:0;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff;cursor:pointer;padding:8px 12px;border:1px solid var(--hair2);border-radius:2px}
+.lb-close:hover{background:#fff;color:#000}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.rev{opacity:0}.rev.in{animation:up .9s cubic-bezier(.2,.6,.2,1) forwards}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1;animation:none}}
+
+.logobar{padding:44px 0;border-bottom:1px solid var(--hair);background:var(--bg2)}
+.lgrow{display:flex;align-items:center;justify-content:space-between;gap:40px;max-width:920px;margin:0 auto}
+.lgrow .lg{flex:1;display:flex;justify-content:center}
+.lgrow img{width:auto;opacity:.85;transition:.3s}
+.lgrow .lg:hover img{opacity:1}
+.lgrow .mo img{height:44px}
+.lgrow .mu img{height:26px}
+.lgrow .wo img{height:46px}
+@media(max-width:600px){.lgrow{gap:20px}.lgrow .mo img{height:30px}.lgrow .wo img{height:32px}.lgrow .mu img{height:19px}}
+.people-body{max-width:820px;margin-top:34px}
+.people-body p{color:var(--dim);font-size:16px;line-height:1.7;margin-bottom:18px;font-weight:300}
+.people-body b{color:var(--ink);font-weight:500}
+.hero-logos{display:flex;justify-content:center;align-items:center;gap:clamp(22px,4vw,52px);opacity:.96;filter:drop-shadow(0 1px 6px rgba(0,0,0,.85));flex-wrap:nowrap}
+.hero-logos .sep{color:rgba(255,255,255,.55);font-size:14px;flex:none}
+.hero-logos img{width:auto;display:block;max-height:34px}
+.hero-logos .mo img{height:30px}.hero-logos .mu img{height:17px}.hero-logos .wo img{height:31px}
+@media(max-width:600px){.hero-logos{gap:16px}.hero-logos .mo img{height:20px}.hero-logos .wo img{height:21px}.hero-logos .mu img{height:12px}}
+.featured-top{padding:60px 0 0}
+.hero-note{margin-top:16px;text-align:right;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.ai-note{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);text-align:right}
+.hero-top{display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap}
+.hnote{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-weight:700;text-align:right;max-width:280px}
+
+.human-line{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(24px,3.15vw,40px);line-height:1.16;letter-spacing:-.035em;word-spacing:-.03em;color:var(--ink);text-align:justify}
+.human-line em{font-style:normal;color:var(--acc)}
+.human-line b{font-weight:700;color:var(--ink)}
+</style></head>
+<body>
+<nav class="nav"><div class="nav-in">
+  <a href="#" class="logo">meta<i>·</i>UNIT</a>
+  <div class="nav-links"><a href="#work">Work</a><a href="#ecosystem">Ecosystem</a><a href="#manifesto">Manifesto</a><a href="#caps">Capabilities</a><a href="#contact">Contact</a></div>
+  <a href="#contact" class="nav-cta">Let's talk</a>
+</div></nav>
+
+<header class="hero">
+  <video autoplay muted loop playsinline preload="auto" poster="assets/img/hero_reel_poster.jpg"><source src="assets/video/hero_reel.mp4" type="video/mp4"></video>
+  <div class="wrap hero-in">
+    <div class="hero-logos" style="display:flex;flex-flow:row nowrap;justify-content:center;align-items:center;gap:44px;width:100%">
+      <img src="assets/eco/moon.png" alt="Moon Films" style="height:30px;width:auto;flex:none">
+      <span class="sep" style="flex:none">×</span>
+      <img src="assets/eco/metaunit.png" alt="metaUNIT" style="height:17px;width:auto;flex:none">
+      <span class="sep" style="flex:none">×</span>
+      <img src="assets/eco/watchout.png" alt="Watchout Studio" style="height:31px;width:auto;flex:none">
+    </div>
+    <div class="hero-main">
+      <span class="lab">AI-native film &amp; commercial unit</span>
+      <h1>AI, <span class="d">directed.</span></h1>
+      <p class="hero-sub">A director-led AI unit — built to deliver the highest quality, on deadline, in the dynamics of the advertising pipeline.</p>
+      <div class="hero-note">All video &amp; graphics on this site were created using AI</div>
+      <div class="specbar">
+        <div class="spec"><div class="k">Based</div><div class="v">Warszawa · Est. 2026</div></div>
+        <div class="spec"><div class="k">Craft</div><div class="v">Film experts, powered by AI — not AI creators</div></div>
+        <div class="spec"><div class="k">Role</div><div class="v">We set the path — together with the industry</div></div>
+        <div class="spec"><div class="k">Always</div><div class="v">New tools, new possibilities, same highest quality</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="clients"><div class="wrap clients-in">
+  <span class="lab">On air for</span>
+  <div class="names"><span>Allegro</span><span>Żabka</span><span>Fortuna</span><span>Eurojackpot</span><span>EURO RTV AGD</span><span>Quickchat.AI</span></div>
+</div></section>
+
+<section class="featured-top"><div class="wrap"><div class="films"><article class="film w12" onclick="openLB('assets/full/hockey.mp4','Allegro · Hockey')"><span class="feat">Featured spot</span><span class="watch">▶ Watch film</span><img class="pf" src="assets/films/hockey.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/hockey.mp4" type="video/mp4"></video><div class="finfo"><h3>Allegro <span style='color:var(--dim);font-weight:400'>— Hockey</span></h3><div class="cred"><span><b>Client</b>Allegro</span><span><b>AI</b>metaUNIT</span></div></div></article></div></div></section>
+
+<section class="posband"><div class="wrap">
+  <div class="pos-top"><span class="lab">The real tool</span><span class="pos-tag">Your people — powered by AI</span></div>
+  <p class="small">We can already create anything in AI. Tomorrow, like today, we'll make only what makes sense — because our job is to propose the most quality, optimal solution. The tool was never the point.</p>
+  <p class="human-line">The <em>humans</em> you trusted. The <em>humans</em> who delivered. The <em>humans</em> who stood beside you for every win. The <em>humans</em> who saved it. The <em>humans</em> who dreamed it up. The <em>humans</em> who made it. <b>metaUNIT is your <em>humans</em></b> — stronger than ever. For you.</p>
+</div></section>
+
+<section id="work" style="padding-bottom:96px">
+  <div class="wrap"><div class="shead">
+    <h2>Selected work.</h2>
+    <div class="rt">Hover to preview · click to watch the full film</div>
+  </div></div>
+  <div class="wall" id="wall"><div class="tile vid wide" onclick="openLB('assets/full/hockey.mp4','Allegro · Hockey')"><img class="phi" src="assets/films/hockey.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/hockey.mp4" type="video/mp4"></video></div><div class="tile"><img class="a show" src="assets/wall/mb_food_080.jpg"><img class="b"></div><div class="tile vid wide" onclick="openLB('assets/full/smart.mp4','Allegro · Smart Week')"><img class="phi" src="assets/films/smart.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/smart.mp4" type="video/mp4"></video></div><div class="tile"><img class="a show" src="assets/wall/mb_hockey_008.jpg"><img class="b"></div><div class="tile"><img class="a show" src="assets/wall/mb_kawa_101.jpg"><img class="b"></div><div class="tile vid wide" onclick="openLB('assets/full/food.mp4','Food Reel')"><img class="phi" src="assets/films/food.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/food.mp4" type="video/mp4"></video></div><div class="tile"><img class="a show" src="assets/wall/mb_zabka_054.jpg"><img class="b"></div><div class="tile vid wide" style="cursor:default"><img class="phi" src="assets/films/toyota.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/toyota.mp4" type="video/mp4"></video></div><div class="tile"><img class="a show" src="assets/wall/mb_hockey_022.jpg"><img class="b"></div><div class="tile"><img class="a show" src="assets/wall/mb_zabka_036.jpg"><img class="b"></div><div class="tile"><img class="a show" src="assets/wall/mb_toyota_114.jpg"><img class="b"></div><div class="tile"><img class="a show" src="assets/wall/mb_food_074.jpg"><img class="b"></div><div class="tile"><img class="a show" src="assets/wall/mb_hockey_029.jpg"><img class="b"></div><div class="tile"><img class="a show" src="assets/wall/mb_hockey_016.jpg"><img class="b"></div><div class="tile vid wide" onclick="openLB('assets/full/fortuna.mp4','Fortuna')"><img class="phi" src="assets/films/fortuna.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/fortuna.mp4" type="video/mp4"></video></div><div class="tile"><img class="a show" src="assets/wall/mb_zabka_032.jpg"><img class="b"></div><div class="tile vid wide" onclick="openLB('assets/full/qc_plane.mp4','Quickchat.AI')"><img class="phi" src="assets/films/qc_plane.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/qc_plane.mp4" type="video/mp4"></video></div><div class="tile"><img class="a show" src="assets/wall/fight_a.jpg"><img class="b"></div><div class="tile"><img class="a show" src="assets/wall/mb_kawa_100.jpg"><img class="b"></div><div class="tile vid wide"  style="cursor:default"><img class="phi" src="assets/films/rtv.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/rtv.mp4" type="video/mp4"></video></div><div class="tile vid wide" onclick="openLB('assets/full/zabka.mp4','Żabka')"><img class="phi" src="assets/films/zabka.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/zabka.mp4" type="video/mp4"></video></div><div class="tile"><img class="a show" src="assets/wall/te_fort1.jpg"><img class="b"></div></div>
+  <div class="wrap"><div class="films"><article class="film w12" onclick="openLB('assets/full/food.mp4','Food Reel')"><span class="watch">▶ Watch film</span><img class="pf" src="assets/films/food.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/food.mp4" type="video/mp4"></video><div class="finfo"><h3>Food Reel</h3></div></article><article class="film w6" onclick="openLB('assets/full/smart.mp4','Allegro · Smart Week')"><span class="watch">▶ Watch film</span><img class="pf" src="assets/films/smart.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/smart.mp4" type="video/mp4"></video><div class="finfo"><h3>Allegro <span style='color:var(--dim);font-weight:400'>— Smart Week · Blimp over Warsaw</span></h3><div class="cred"><span><b>Client</b>Allegro</span></div></div></article><article class="film w6" onclick="openLB('assets/full/fortuna.mp4','Fortuna')"><span class="watch">▶ Watch film</span><img class="pf" src="assets/films/fortuna.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/fortuna.mp4" type="video/mp4"></video><div class="finfo"><h3>Fortuna <span style='color:var(--dim);font-weight:400'>— AI sequences</span></h3><div class="cred"><span><b>Client</b>Fortuna</span></div></div></article><article class="film w6" onclick="openLB('assets/full/qc_plane.mp4','Quickchat.AI')"><span class="watch">▶ Watch film</span><img class="pf" src="assets/films/qc_plane.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/qc_plane.mp4" type="video/mp4"></video><div class="finfo"><h3>Quickchat.AI <span style='color:var(--dim);font-weight:400'>— Airplane</span></h3><div class="cred"><span><b>Client</b>Quickchat.AI</span></div></div></article><article class="film w6"  style="cursor:default"><img class="pf" src="assets/films/toyota.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/toyota.mp4" type="video/mp4"></video></article><article class="film w6"  style="cursor:default"><span class="watch" style="opacity:.8">AI sequence</span><img class="pf" src="assets/films/rtv.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/rtv.mp4" type="video/mp4"></video><div class="finfo"><h3>EURO RTV AGD <span style='color:var(--dim);font-weight:400'>— AI sequences</span></h3><div class="cred"><span><b>Client</b>EURO RTV AGD</span></div></div></article><article class="film w6" onclick="openLB('assets/full/zabka.mp4','Żabka')"><span class="watch">▶ Watch film</span><img class="pf" src="assets/films/zabka.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/zabka.mp4" type="video/mp4"></video><div class="finfo"><h3>Żabka <span style='color:var(--dim);font-weight:400'>— AI sequences</span></h3><div class="cred"><span><b>Client</b>Żabka</span></div></div></article></div></div>
+</section>
+
+<section id="ecosystem" class="eco"><div class="wrap">
+  <div class="pos-top"><span class="lab">Ecosystem</span><span class="pos-tag">Moon × metaUNIT × Watchout</span></div>
+  <p class="eco-lead">More than a company.<br><em>An ecosystem.</em></p>
+  <p class="eco-sub">Collaboration and centralized competence — above business divisions. What we learned yesterday, we share today, to build a better tomorrow. Responsibly.</p>
+  <div class="eco-logos">
+    <div class="lg mo"><img src="assets/eco/moon.png" alt="Moon Films"></div>
+    <span class="sep">×</span>
+    <div class="lg mu"><img src="assets/eco/metaunit.png" alt="metaUNIT"></div>
+    <span class="sep">×</span>
+    <div class="lg wo"><img src="assets/eco/watchout.png" alt="Watchout Studio"></div>
+  </div>
+  <div class="eco-body">
+    <p>That's why we work together with Watchout Studio and Moon Films — combining competencies, legal tools, pipeline and trained people: filmmakers, producers and production managers, and the production designers and costume designers you already know. So the same specialists who always ran the client's process still run it — and the client gets the same quality as always. We only change the tools.</p>
+    <p>Two studios don't just step into the new era of meta-production — they show, by the best possible example, what centralized collaboration looks like: cooperation beyond divisions, exchange of experience, partnership over rivalry. Because together we go further — and together we can offer more, to our clients and to each other.</p>
+  </div>
+</div></section>
+
+<section id="manifesto" class="mani"><div class="wrap">
+  <span class="lab">Manifesto</span>
+  <p class="mani-lead">Built by filmmakers.<br><em>Powered by AI.</em></p>
+  <p class="mani-sub">metaUNIT uses new technology on a newly built workflow — made by the people whose skills our clients already used and trusted.</p>
+  <div class="prin"><div class="pr"><div class="n">01</div><h4>Made by the people you trusted</h4><p>We work with production designers, costume designers, DoPs and post houses. AI didn't replace them — it joined them.</p></div><div class="pr"><div class="n">02</div><h4>The director is the unit</h4><p>metaUNIT's core is a team working directly with the director — the closest, most direct collaboration, with communication already worked out. That's why it works.</p></div><div class="pr"><div class="n">03</div><h4>Not a post house</h4><p>We work with post houses. We didn't come to fight for every project — we came to lead on quality and point the direction.</p></div><div class="pr"><div class="n">04</div><h4>Full-generative, full system</h4><p>We work only on full-generative AI shots, and only inside a real production system — production house, post-production and the right specialists. Safety held by an AI-trained crew of experienced producers. Exactly like a normal shoot.</p></div><div class="pr"><div class="n">05</div><h4>Professionals, not enthusiasts</h4><p>We're not AI enthusiasts. We're professionals who expanded our skills to deliver the highest quality with the latest technology.</p></div><div class="pr"><div class="n">06</div><h4>We educate first</h4><p>You can't use AI effectively in the old process. Centralized decisions, communication and true partnership make quality collaboration possible — we build in-house tools we share with partners, plus pro-bono education for the industry.</p></div></div>
+</div></section>
+
+<section class="climax"><div class="bg"></div><div class="wrap in">
+  <span class="lab">who_we_are</span>
+  <h3>We are not AI creators.<br><em>We are filmmakers.</em></h3>
+  <p>We're the creators who have worked with you for years. Knowing your needs, your standards, and the hard parts of the production process, we built a workflow that gives our clients the same skills — and the same people — they have always relied on. Now powered by AI.<br><br>Filmmaking was always a director's unit. When the industry forgot that for a moment, we showed up — not to compete with post houses or other "AI creators." We offer something else. We offer what we always have: good films, campaigns that work, stories with real quality — and the same people. The only difference is tools more powerful than ever before.</p>
+  <div class="tagline">We were always a unit. Today we return as metaUNIT — to lead, to educate, to create.</div>
+</div></section>
+
+<section><div class="wrap">
+  <span class="lab">The people</span>
+  <div class="people-body">
+    <p>metaUNIT the company is a hub — it gathers many metaUnits, small director-led units, as its makers. metaUNIT the unit is a team, and an idea: a team with a director at its head.</p>
+    <p><b>metaUNIT Team #0001 is Kuba Michalczuk</b> — founder and promoter of the metaUNIT idea, an AI educator in the industry, and a director with three theatrically successful feature films and 500+ commercials behind him.</p>
+    <p>That's why we build processes and bring AI in as filmmakers — not as hobbyists chasing new tech. And we don't do it alone: we combine the competencies of two production houses, bringing in DoPs, production designers and costume designers, so clients get the film specialists they already worked with — watched over by the productions they know and trust. Because quality matters as much as safety.</p>
+  </div>
+</div>
+<div class="wrap"><div class="strip">
+  <div class="cell"><img src="assets/visuals/62A991DD-9B05-410D-8460-5F203DB5DD72.jpg" alt=""><span class="cap">Camera</span></div>
+  <div class="cell"><img src="assets/visuals/F2F6B452-041F-45F2-B1C0-38AC0DEC3024.jpg" alt=""><span class="cap">Crew</span></div>
+  <div class="cell"><img src="assets/visuals/E3FF84C8-1092-4E12-8045-5FB36057905F.jpg" alt=""><span class="cap">Direction</span></div>
+  <div class="cell"><img src="assets/visuals/D9487FAC-AD2D-4558-92F0-5C83D2C37B94.jpg" alt=""><span class="cap">Screening</span></div>
+</div></div></section>
+
+<section id="caps"><div class="wrap">
+  <div class="shead"><h2>A directed generative pipeline. <em>End to end.</em></h2></div>
+</div></section>
+
+<section id="contact" class="contact"><div class="bg"></div><div class="wrap contact-in">
+  <span class="lab">Contact</span>
+  <h2>Have a brief?<br><em>Let's talk.</em></h2>
+  <div class="contact-row">
+    <a class="contact-mail" href="mailto:hello@metaunit.io">hello@metaunit.io</a>
+    <div class="contact-info">metaUNIT — film &amp; commercial<br>Led by Kuba Michalczuk<br>Produced by MOON FILMS &amp; WATCHOUT STUDIO<br>Warszawa · Poland</div>
+  </div>
+</div></section>
+
+<footer><div class="wrap" style="padding-bottom:14px"><div class="ai-note">All video and graphic materials visible on this site were created using AI.</div></div><div class="wrap foot">
+  <span class="logo">meta<i style="color:var(--acc);font-style:normal">·</i>UNIT</span>
+  <span>Built by filmmakers, with filmmakers</span>
+  <span>© 2026 · Warszawa</span>
+</div></footer>
+
+<div class="lb" id="lb" onclick="if(event.target.id==='lb')closeLB()">
+  <div class="lb-box">
+    <div class="lb-close" onclick="closeLB()">Close ✕</div>
+    <video id="lbv" controls playsinline></video>
+    <div class="lb-cap"><b id="lbcap"></b><span>metaUNIT — AI production</span></div>
+  </div>
+</div>
+
+<script>
+function openLB(src,cap){var lb=document.getElementById('lb'),v=document.getElementById('lbv');
+ document.getElementById('lbcap').textContent=cap; v.src=src; lb.classList.add('on'); v.play().catch(()=>{}); document.body.style.overflow='hidden';}
+function closeLB(){var lb=document.getElementById('lb'),v=document.getElementById('lbv'); lb.classList.remove('on'); v.pause(); v.removeAttribute('src'); v.load(); document.body.style.overflow='';}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB();});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.05});
+document.querySelectorAll('section,.film,.pr,.strip .cell,.chip').forEach(el=>{el.classList.add('rev');io.observe(el)});
+const hv=document.querySelector('.hero video'); if(hv){hv.play().catch(()=>{})}
+function fitKey(){var el=document.getElementById('fitkey');if(!el)return;var cw=el.parentElement.clientWidth;el.style.fontSize='40px';var w=el.scrollWidth;if(!w)return;var fs=40*cw/w*0.995;fs=Math.max(20,Math.min(fs,150));el.style.fontSize=fs+'px';}
+window.addEventListener('resize',fitKey);fitKey();if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fitKey);}setTimeout(fitKey,400);
+(function(){
+  const POOL=["air_a.jpg","air_b.jpg","carts_a.jpg","cm_a.jpg","fight_a.jpg","food_a.jpg","food_b.jpg","mb_food_060.jpg","mb_food_061.jpg","mb_food_062.jpg","mb_food_063.jpg","mb_food_064.jpg","mb_food_065.jpg","mb_food_066.jpg","mb_food_067.jpg","mb_food_068.jpg","mb_food_069.jpg","mb_food_070.jpg","mb_food_071.jpg","mb_food_072.jpg","mb_food_073.jpg","mb_food_074.jpg","mb_food_075.jpg","mb_food_076.jpg","mb_food_077.jpg","mb_food_078.jpg","mb_food_079.jpg","mb_food_080.jpg","mb_food_081.jpg","mb_food_082.jpg","mb_food_083.jpg","mb_food_084.jpg","mb_food_085.jpg","mb_food_086.jpg","mb_food_087.jpg","mb_food_088.jpg","mb_food_089.jpg","mb_food_090.jpg","mb_food_091.jpg","mb_food_092.jpg","mb_food_093.jpg","mb_food_094.jpg","mb_food_095.jpg","mb_hockey_000.jpg","mb_hockey_001.jpg","mb_hockey_002.jpg","mb_hockey_003.jpg","mb_hockey_004.jpg","mb_hockey_005.jpg","mb_hockey_006.jpg","mb_hockey_007.jpg","mb_hockey_008.jpg","mb_hockey_009.jpg","mb_hockey_010.jpg","mb_hockey_011.jpg","mb_hockey_012.jpg","mb_hockey_013.jpg","mb_hockey_014.jpg","mb_hockey_015.jpg","mb_hockey_016.jpg","mb_hockey_017.jpg","mb_hockey_018.jpg","mb_hockey_019.jpg","mb_hockey_020.jpg","mb_hockey_021.jpg","mb_hockey_022.jpg","mb_hockey_023.jpg","mb_hockey_024.jpg","mb_hockey_025.jpg","mb_hockey_026.jpg","mb_hockey_027.jpg","mb_hockey_028.jpg","mb_hockey_029.jpg","mb_kawa_096.jpg","mb_kawa_097.jpg","mb_kawa_098.jpg","mb_kawa_099.jpg","mb_kawa_100.jpg","mb_kawa_101.jpg","mb_kawa_102.jpg","mb_kawa_103.jpg","mb_kawa_104.jpg","mb_kawa_105.jpg","mb_kawa_106.jpg","mb_kawa_107.jpg","mb_toyota_108.jpg","mb_toyota_109.jpg","mb_toyota_110.jpg","mb_toyota_111.jpg","mb_toyota_112.jpg","mb_toyota_113.jpg","mb_toyota_114.jpg","mb_toyota_115.jpg","mb_toyota_116.jpg","mb_toyota_117.jpg","mb_toyota_118.jpg","mb_toyota_119.jpg","mb_toyota_120.jpg","mb_toyota_121.jpg","mb_toyota_122.jpg","mb_zabka_030.jpg","mb_zabka_031.jpg","mb_zabka_032.jpg","mb_zabka_033.jpg","mb_zabka_034.jpg","mb_zabka_035.jpg","mb_zabka_036.jpg","mb_zabka_037.jpg","mb_zabka_038.jpg","mb_zabka_039.jpg","mb_zabka_040.jpg","mb_zabka_041.jpg","mb_zabka_042.jpg","mb_zabka_043.jpg","mb_zabka_044.jpg","mb_zabka_045.jpg","mb_zabka_046.jpg","mb_zabka_047.jpg","mb_zabka_048.jpg","mb_zabka_049.jpg","mb_zabka_050.jpg","mb_zabka_051.jpg","mb_zabka_052.jpg","mb_zabka_053.jpg","mb_zabka_054.jpg","mb_zabka_055.jpg","mb_zabka_056.jpg","mb_zabka_057.jpg","mb_zabka_058.jpg","mb_zabka_059.jpg","plane_a.jpg","rush_a.jpg","ster_a.jpg","ster_s1.jpg","ster_s2.jpg","ster_s3.jpg","te_fort1.jpg","te_fort2.jpg","te_fort3.jpg","te_rtv.jpg","te_zabka.jpg","tort_a.jpg","toy_a.jpg","toy_b.jpg","wafel_a.jpg","week_a.jpg"];
+  const tiles=[...document.querySelectorAll('#wall .tile:not(.vid)')];
+  let bag=[]; const draw=()=>{ if(!bag.length){bag=[...POOL].sort(()=>Math.random()-.5);} return bag.pop(); };
+  const state=new Map(); const src=n=>'assets/wall/'+n;
+  tiles.forEach(t=>{const a=t.querySelector('.a'); const cur=(a.getAttribute('src')||'').split('/').pop(); a.classList.add('show'); state.set(t,{cur:'a',img:cur});});
+  function swapTile(t){
+    if(t.matches(':hover'))return;
+    const s=state.get(t); let next=draw(); let g=0; while(next===s.img&&g++<6) next=draw();
+    const showEl=t.querySelector('.'+s.cur); const hideEl=t.querySelector(s.cur==='a'?'.b':'.a');
+    const im=new Image(); im.onload=()=>{hideEl.src=im.src; hideEl.classList.add('show'); showEl.classList.remove('show'); state.set(t,{cur:s.cur==='a'?'b':'a',img:next});}; im.src=src(next);
+  }
+  function wave(){const order=tiles.map((t,i)=>i).sort(()=>Math.random()-.5).slice(0,5); order.forEach((ti,k)=>setTimeout(()=>swapTile(tiles[ti]),k*150));}
+  let timer=setInterval(wave,5000); setTimeout(wave,1200);
+  document.addEventListener('visibilitychange',()=>{ if(document.hidden){clearInterval(timer);timer=null} else if(!timer){timer=setInterval(wave,5000)} });
+})();
+</script>
+</body></html>
