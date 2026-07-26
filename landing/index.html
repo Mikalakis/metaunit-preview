@@ -84,6 +84,8 @@ section{padding:120px 0;position:relative}
 .reel-head::before{content:"";width:22px;height:1px;background:var(--acc);flex:none}
 .reel-head::after{content:"";flex:1;height:1px;background:var(--hair2)}
 .ai-note-c{text-align:center;color:var(--faint);font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;margin-top:30px}
+.contact-lead{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(18px,2.5vw,28px);line-height:1.34;letter-spacing:-.015em;color:var(--ink);white-space:nowrap;margin:0 auto}
+@media(max-width:660px){.contact-lead{white-space:normal;font-size:20px}}
 .film{position:relative;overflow:hidden;border:1px solid var(--hair);border-radius:5px;background:#000;aspect-ratio:16/9;cursor:pointer;transition:border-color .3s,transform .5s cubic-bezier(.2,.6,.2,1)}
 .film:hover{border-color:var(--hair2)}
 .film.w12{grid-column:span 12;aspect-ratio:21/9}.film.w6{grid-column:span 6}.film.w4{grid-column:span 4}
@@ -267,7 +269,7 @@ footer{border-top:1px solid var(--hair);background:var(--bg);padding:30px 0}
   <div class="wrap">
     <span class="lab" style="justify-content:center">Contact</span>
     <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(30px,5vw,58px);letter-spacing:-.03em;line-height:1.02;margin:18px 0 14px;color:var(--ink)">Have a brief?</h2>
-    <p style="font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:clamp(19px,2.5vw,30px);line-height:1.34;letter-spacing:-.015em;color:var(--ink);max-width:780px;margin:0 auto">You can reach us through <em style="font-style:normal;color:var(--acc)">Moon Films</em> and <em style="font-style:normal;color:var(--acc)">Watchout Studio</em> — either one.</p>
+    <p class="contact-lead">You can reach us through <em style="font-style:normal;color:var(--acc)">Moon Films</em> and <em style="font-style:normal;color:var(--acc)">Watchout Studio</em>.</p>
     <p style="color:var(--dim);font-size:clamp(14px,1.5vw,16px);font-weight:300;margin:22px auto 0;max-width:700px;line-height:1.6">Competencies centralized above company lines: yesterday we might have been competitors — today we are one unit, together building a better tomorrow for our industry.</p>
     <p style="color:var(--dim);font-size:15px;font-weight:300;margin:26px auto 0;max-width:640px;line-height:1.55">And always, of course, you can reach us directly at <a href="mailto:hello@metaunit.io" style="color:var(--ink);border-bottom:1px solid var(--acc);padding-bottom:1px">hello@metaunit.io</a>.</p>
     <div style="color:var(--faint);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;line-height:1.9">metaUNIT — film &amp; commercial · Led by Kuba Michalczuk<br>Produced by MOON FILMS &amp; WATCHOUT STUDIO · Warszawa · Poland</div>
