@@ -146,6 +146,10 @@ section{padding:120px 0;position:relative}
 .contact-mail{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(24px,3.4vw,42px);letter-spacing:-.02em;color:#fff;display:inline-flex;align-items:center;gap:16px}
 .contact-mail::after{content:"→";color:var(--acc);transition:.3s}.contact-mail:hover::after{transform:translateX(10px)}
 .contact-info{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);text-align:right;line-height:2}
+.contact-lead2{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:clamp(24px,4vw,50px);line-height:1.08;letter-spacing:-.03em;color:#fff;margin:0 0 22px;max-width:22ch}
+.contact-lead2 em{font-style:normal;color:var(--acc)}
+.contact-phil{font-size:clamp(15px,1.6vw,18px);color:var(--dim);font-weight:300;line-height:1.6;max-width:800px;margin:0 0 50px}
+.contact-direct-lab{display:block;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
 footer{border-top:1px solid var(--hair);background:var(--bg);padding:30px 0}
 .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
 .foot .logo{font-size:14px}
@@ -230,10 +234,10 @@ footer{border-top:1px solid var(--hair);background:var(--bg);padding:30px 0}
       <p class="hero-sub">A director-led AI unit — built to deliver the highest quality, on deadline, in the dynamics of the advertising pipeline.</p>
       <div class="hero-note">All video &amp; graphics on this site were created using AI</div>
       <div class="specbar">
-        <div class="spec"><div class="k">Based</div><div class="v">Warszawa · Est. 2026</div></div>
-        <div class="spec"><div class="k">Craft</div><div class="v">Film experts, powered by AI — not AI creators</div></div>
-        <div class="spec"><div class="k">Role</div><div class="v">We set the path — together with the industry</div></div>
-        <div class="spec"><div class="k">Always</div><div class="v">New tools, new possibilities, same highest quality</div></div>
+        <div class="spec"><div class="k">Based</div><div class="v">Warsaw 2025</div></div>
+        <div class="spec"><div class="k">Craft</div><div class="v">We are not AI artists. We are film experts powered by AI.</div></div>
+        <div class="spec"><div class="k">Role</div><div class="v">We teach, build and set the path — for and together with the industry.</div></div>
+        <div class="spec"><div class="k">Tools</div><div class="v">We build our own original tools, tailored to our clients' needs.</div></div>
       </div>
     </div>
   </div>
@@ -247,8 +251,8 @@ footer{border-top:1px solid var(--hair);background:var(--bg);padding:30px 0}
 <section class="featured-top"><div class="wrap"><div class="films"><article class="film w12" onclick="openLB('assets/full/hockey.mp4','Allegro · Hockey')"><span class="feat">Featured spot</span><span class="watch">▶ Watch film</span><img class="pf" src="assets/films/hockey.jpg" alt=""><video muted loop playsinline preload="none" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"><source src="assets/films/hockey.mp4" type="video/mp4"></video><div class="finfo"><h3>Allegro <span style='color:var(--dim);font-weight:400'>— Hockey</span></h3><div class="cred"><span><b>Client</b>Allegro</span><span><b>AI</b>metaUNIT</span></div></div></article></div></div></section>
 
 <section class="posband"><div class="wrap">
-  <div class="pos-top"><span class="lab">The real tool</span><span class="pos-tag">Your people — powered by AI</span></div>
-  <p class="small">We can already create anything in AI. Tomorrow, like today, we'll make only what makes sense — because our job is to propose the most quality, optimal solution. The tool was never the point.</p>
+  <div class="pos-top"><span class="lab">The real people behind the tool</span><span class="pos-tag">Your people — powered by AI</span></div>
+  <p class="small">We can already create anything in AI. Tomorrow, like today, we'll make only what makes sense — because our job is to propose the most quality, optimal solution. AI is a tool. And the tool was never the point — and never will be.</p>
   <p class="human-line">The <em>humans</em> you trusted. The <em>humans</em> who delivered. The <em>humans</em> who stood beside you for every win. The <em>humans</em> who saved it. The <em>humans</em> who dreamed it up. The <em>humans</em> who made it. <b>metaUNIT is your <em>humans</em></b> — stronger than ever. For you.</p>
 </div></section>
 
@@ -305,16 +309,18 @@ footer{border-top:1px solid var(--hair);background:var(--bg);padding:30px 0}
 
 <section id="contact" class="contact"><div class="bg"></div><div class="wrap contact-in">
   <span class="lab">Contact</span>
-  <h2>Have a brief?<br><em>Let's talk.</em></h2>
+  <h2>Have a brief?</h2>
+  <p class="contact-lead2">You can reach us through <em>Moon Films</em> and <em>Watchout Studio</em>.</p>
+  <p class="contact-phil">Competencies centralized above company lines: yesterday we might have been competitors — today we are one unit, together building a better tomorrow for our industry.</p>
   <div class="contact-row">
-    <a class="contact-mail" href="mailto:hello@metaunit.io">hello@metaunit.io</a>
+    <div class="contact-direct"><span class="contact-direct-lab">And always, of course — directly:</span><a class="contact-mail" href="mailto:hello@metaunit.io">hello@metaunit.io</a></div>
     <div class="contact-info">metaUNIT — film &amp; commercial<br>Led by Kuba Michalczuk<br>Produced by MOON FILMS &amp; WATCHOUT STUDIO<br>Warszawa · Poland</div>
   </div>
 </div></section>
 
 <footer><div class="wrap" style="padding-bottom:14px"><div class="ai-note">All video and graphic materials visible on this site were created using AI.</div></div><div class="wrap foot">
   <span class="logo">meta<i style="color:var(--acc);font-style:normal">·</i>UNIT</span>
-  <span>Built by filmmakers, with filmmakers</span>
+  <span>Built by filmmakers, with filmmakers — for the whole industry</span>
   <span>© 2026 · Warszawa</span>
 </div></footer>
 
