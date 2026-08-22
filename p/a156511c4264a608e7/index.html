@@ -264,6 +264,8 @@ section + section{ border-top:1px solid var(--line); }
 .lane.b{ border-top-color:var(--loc); }
 .lane.c{ border-top-color:var(--prod); }
 .lane.d{ border-top-color:var(--tungsten); }
+.lane.e{ border-top-color:#8697a4; }
+.lane.e .who{ color:#8697a4; }
 .lane .who{ font-family:"IBM Plex Mono",monospace; font-size:11.5px; letter-spacing:.16em; text-transform:uppercase; }
 .lane.a .who{ color:var(--char); }
 .lane.b .who{ color:var(--loc); }
@@ -277,6 +279,57 @@ section + section{ border-top:1px solid var(--line); }
   font-family:"IBM Plex Mono",monospace; font-size:12.5px; letter-spacing:.06em; color:var(--paper);
   font-variant-numeric:tabular-nums;
 }
+
+/* ---- featured lane (directors) ---- */
+.lane.wide{
+  grid-column:1 / -1;
+  border-top-color:var(--tungsten);
+  background:linear-gradient(180deg, rgba(247,193,59,.06), rgba(13,16,20,0) 62%), var(--ink-2);
+}
+.lane.wide h3{ font-size:clamp(24px,3vw,32px); }
+.lane.wide .split{ display:grid; grid-template-columns:1.15fr 1fr; gap:clamp(18px,3vw,38px); align-items:start; }
+@media (max-width:760px){ .lane.wide .split{ grid-template-columns:minmax(0,1fr); } }
+.lane .note{
+  font-size:14.5px; line-height:1.55; color:var(--grade);
+  border-left:1px solid var(--line-2); padding-left:16px;
+}
+.lane .note b{ color:var(--paper); font-weight:600; }
+
+/* ============================ ONE HOUR ============================ */
+.hour{
+  display:grid; grid-template-columns:auto 1fr; gap:clamp(22px,4vw,52px); align-items:start;
+}
+@media (max-width:800px){ .hour{ grid-template-columns:minmax(0,1fr); } }
+.hour-clock{
+  border:1px solid var(--tungsten-d); padding:clamp(16px,2.4vw,24px) clamp(20px,3vw,30px);
+  text-align:center; align-self:start;
+}
+.hour-clock .num{
+  font-family:"Anton",Impact,sans-serif; font-weight:400; line-height:.86;
+  font-size:clamp(52px,8vw,96px); color:var(--tungsten); letter-spacing:.01em;
+}
+.hour-clock .unit{
+  font-family:"IBM Plex Mono",monospace; font-size:11px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--grade); margin-top:8px;
+}
+.io{ display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:clamp(18px,3vw,34px); }
+@media (max-width:680px){ .io{ grid-template-columns:minmax(0,1fr); } }
+.io-col h4{
+  margin:0 0 14px; font-family:"IBM Plex Mono",monospace; font-size:11px; font-weight:500;
+  letter-spacing:.2em; text-transform:uppercase;
+}
+.io-col.in h4{ color:var(--grade-2); }
+.io-col.out h4{ color:var(--tungsten); }
+.io-list{ display:grid; gap:9px; }
+.io-list div{
+  font-size:16px; line-height:1.4; color:var(--paper);
+  padding-left:20px; position:relative;
+}
+.io-list div::before{
+  content:""; position:absolute; left:0; top:9px; width:9px; height:1px; background:var(--line-2);
+}
+.io-col.out .io-list div::before{ background:var(--tungsten); }
+.io-list small{ display:block; font-size:13.5px; color:var(--grade-2); margin-top:2px; }
 
 /* ============================ CLOSER ============================ */
 .closer{ padding-block:clamp(64px,10vw,132px); text-align:left; }
@@ -464,42 +517,92 @@ section + section{ border-top:1px solid var(--line); }
   </div>
 </section>
 
+<!-- ============================ ONE HOUR ============================ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="stamp" style="margin:0">What you get &middot; 05</p>
+      <h2 class="display">Drop in a script.<br>Walk out with a production.</h2>
+    </div>
+
+    <div class="hour rise">
+      <div class="hour-clock">
+        <div class="num">60</div>
+        <div class="unit">minutes</div>
+      </div>
+
+      <div class="io">
+        <div class="io-col in">
+          <h4>What you put in</h4>
+          <div class="io-list">
+            <div>Your script<small>.txt &middot; .fdx &middot; .pdf</small></div>
+            <div>The agency deck<small>It reads the mood, the references and the material inside it</small></div>
+          </div>
+        </div>
+        <div class="io-col out">
+          <h4>What you take out</h4>
+          <div class="io-list">
+            <div>A shooting board<small>Every shot with a size, a duration, staging and light</small></div>
+            <div>Production stills<small>Not sketches &mdash; frames you can actually shoot from</small></div>
+            <div>Every asset<small>Characters, locations, products &mdash; identity locked across the film</small></div>
+            <div>Everything animation needs<small>Including the animation prompts, segment by segment</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="pull rise" style="margin-top:clamp(30px,4.5vw,52px)">And at <em>every single step</em>, twenty years of directing is doing the thinking.</p>
+  </div>
+</section>
+
 <!-- ============================ LANES ============================ -->
 <section>
   <div class="wrap">
     <div class="sec-head">
-      <p class="stamp" style="margin:0">Who it is for · 05</p>
-      <h2 class="display">Four rooms.<br>One device.</h2>
+      <p class="stamp" style="margin:0">Who it is for &middot; 06</p>
+      <h2 class="display">Five rooms.<br>One device.</h2>
     </div>
 
     <div class="lanes rise">
 
-      <div class="lane a">
-        <p class="who">Brand &mdash; in&#8209;house</p>
-        <h3>Run your own digital spots</h3>
-        <p>Put your internal AI team on it and they stop being a bottleneck. <strong>Quality, speed and throughput all move at once</strong>, at a fraction of what the same work costs outside.</p>
-        <p class="kpi">Internal team &rarr; upgraded, not replaced</p>
+      <div class="lane wide d">
+        <p class="who">Directors</p>
+        <div class="split">
+          <div style="display:grid; gap:13px">
+            <h3>Board it live, while they are still on the call</h3>
+            <p>Your shooting board and your animatic, built <strong>during the conversation</strong> &mdash; not sent over three days later when the idea has gone cold. The agency describes a change, you make it, they see it before the call ends.</p>
+            <p class="kpi">Board in minutes &nbsp;&middot;&nbsp; animatic the same hour</p>
+          </div>
+          <p class="note">This is the part no other tool gives you. The shot breakdown, the staging and the rhythm are already inside it &mdash; so what appears on screen is <b>directed</b>, not generated. You are steering, not prompting.</p>
+        </div>
       </div>
 
       <div class="lane b">
-        <p class="who">Agency</p>
+        <p class="who">Creative agency</p>
         <h3>Present a board, not a document</h3>
         <p>Drop in the script. Five minutes later you are presenting a <strong>shooting board</strong> instead of a page of text. Give it another hour or two and it is an animatic &mdash; <strong>the kind an outside house needs two weeks to deliver</strong>. Show the client several versions instead of one.</p>
-        <p class="kpi">2 weeks &rarr; 2 hours &nbsp;·&nbsp; several versions, not one</p>
+        <p class="kpi">2 weeks &rarr; 2 hours &nbsp;&middot;&nbsp; several versions, not one</p>
+      </div>
+
+      <div class="lane a">
+        <p class="who">Client &mdash; brand in&#8209;house</p>
+        <h3>Run your own digital spots</h3>
+        <p>Put your internal AI team on it and they stop being a bottleneck. <strong>Quality, speed and throughput all move at once</strong>, at a fraction of what the same work costs outside. No agency round-trip for the simple things.</p>
+        <p class="kpi">Internal team &rarr; upgraded, not replaced</p>
       </div>
 
       <div class="lane c">
-        <p class="who">Production</p>
+        <p class="who">Production house</p>
         <h3>Internal AI production, no crew</h3>
         <p>One supervising person is enough. Bring in an <strong>external director and hand them the tool</strong>. Build the frames together, then pass the files to any AI studio for execution &mdash; they are production files, and they carry their own rights documentation.</p>
-        <p class="kpi">1 supervisor &nbsp;·&nbsp; any studio downstream</p>
+        <p class="kpi">1 supervisor &nbsp;&middot;&nbsp; any studio downstream</p>
       </div>
 
-      <div class="lane d">
-        <p class="who">AI &amp; post studios</p>
+      <div class="lane e">
+        <p class="who">AI unit &amp; post house</p>
         <h3>Collapse the two&#8209;week block</h3>
         <p>The 30&#8209;second job that took a five&#8209;person team two weeks &mdash; script through first cut &mdash; is <strong>one day for a capable operator</strong>. Two people over two days is not one pass; it is several refined versions.</p>
-        <p class="kpi">70 person&#8209;days &rarr; 4</p>
+        <p class="kpi">70 person-days &rarr; 4</p>
       </div>
 
     </div>
